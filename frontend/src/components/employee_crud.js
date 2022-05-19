@@ -27,7 +27,12 @@ const AddEmployee = ({ onAdd }) => {
   };
 
   const onUpdate = (id) => {
-    let item = { name, last_name };
+    let item = {name, last_name};
+    if (id == null)
+    {
+      alert("select a employee for update")
+      return
+    }
     API.patch(`/${id}/`, item).then((res) => refreshEmployees());
   };
 
@@ -36,7 +41,7 @@ const AddEmployee = ({ onAdd }) => {
   };
 
   function selectEmployee(id) {
-    let item = employees.filter((movie) => movie.employee_id === id)[0];
+    let item = employees.filter((employee) => employee.employee_id === id)[0];
     setName(item.name);
     setLastName(item.last_name);
     setEmployeeId(item.employee_id);
@@ -50,6 +55,9 @@ const AddEmployee = ({ onAdd }) => {
           <h3 className="float-left">Create a new Employee</h3>
           <Form onSubmit={onSubmit} className="mt-4">
             <Form.Group className="mb-3" controlId="formBasicName">
+
+              <Form.Label>Current employee_id: {employee_id}</Form.Label>
+              <br/>
               <Form.Label>{employee_id} Name</Form.Label>
               <Form.Control
                 type="text"
@@ -57,6 +65,7 @@ const AddEmployee = ({ onAdd }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              <br/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicGenre">
