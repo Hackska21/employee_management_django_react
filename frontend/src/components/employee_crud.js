@@ -5,8 +5,7 @@ import API from "./api";
 const AddEmployee = ({ onAdd }) => {
   const [name, setName] = useState("");
   const [last_name, setLastName] = useState("");
-  // const [starring, setStarring] = useState("");
-  const [employee_id, setMovieId] = useState(null);
+  const [employee_id, setEmployeeId] = useState(null);
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
@@ -40,14 +39,15 @@ const AddEmployee = ({ onAdd }) => {
     let item = employees.filter((movie) => movie.employee_id === id)[0];
     setName(item.name);
     setLastName(item.last_name);
-    setMovieId(item.employee_id);
+    setEmployeeId(item.employee_id);
   }
 
   return (
     <div className="container mt-5">
       <div className="row">
+
         <div className="col-md-4">
-          <h3 className="float-left">Create a new Movie</h3>
+          <h3 className="float-left">Create a new Employee</h3>
           <Form onSubmit={onSubmit} className="mt-4">
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label>{employee_id} Name</Form.Label>
@@ -60,7 +60,7 @@ const AddEmployee = ({ onAdd }) => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicGenre">
-              <Form.Label>LastName</Form.Label>
+              <Form.Label>Last Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter Last Name"
@@ -90,8 +90,10 @@ const AddEmployee = ({ onAdd }) => {
             </div>
           </Form>
         </div>
+
+
         <div className="col-md-8 m">
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">#</th>
