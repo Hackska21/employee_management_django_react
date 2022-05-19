@@ -20,52 +20,52 @@ each one has the own Docker file and framework structure
 
 ### api
 Based on Django-like basic structure
-api/
-├─ employees/ (django app)
-│  ├─ migrations/ (all database operations for this app)
-│  ├─ __init__.py
-│  ├─ admin.py (admin model declarations)
-│  ├─ apps.py (app django config)
-│  ├─ models.py (models declarations)
-│  ├─ serializers.py (drf serializers for the app)
-│  ├─ test.py
-│  ├─ urls.py (app urls)
-│  ├─ views.py 
-├─ templates/ (django templates)
-├─ users_management_django_react/
-│  ├─ __init__.py
-│  ├─ asgi.py
-│  ├─ settings.py  (django config)
-│  ├─ urls.py   (root of urls)
-│  ├─ wsgi.py
-├─ .env
-├─ __init__.py
-├─ Dockerfile
-├─ manage.py
-├─ requirements.txt
+api/  \
+├─ employees/ (django app) \
+│  ├─ migrations/ (all database operations for this app)\
+│  ├─ __init__.py\
+│  ├─ admin.py (admin model declarations)\
+│  ├─ apps.py (app django config)\
+│  ├─ models.py (models declarations)\
+│  ├─ serializers.py (drf serializers for the app)\
+│  ├─ test.py\
+│  ├─ urls.py (app urls)\
+│  ├─ views.py \
+├─ templates/ (django templates)\
+├─ users_management_django_react/\
+│  ├─ __init__.py\
+│  ├─ asgi.py\
+│  ├─ settings.py  (django config)\
+│  ├─ urls.py   (root of urls)\
+│  ├─ wsgi.py\
+├─ .env\
+├─ __init__.py\
+├─ Dockerfile\
+├─ manage.py\
+├─ requirements.txt\
 
 # frontend
 
-my-app/
-├─ node_modules/
-├─ public/
-│  ├─ favicon.ico
-│  ├─ index.html
-│  ├─ manifest.json
-├─ src/
-│  ├─ components/
-│  │  ├─ api.jsx (Implements axios with BE)
-│  │  ├─ App.js
-│  │  ├─ App.test.js
-│  │  ├─ employee_crud ( Crud component for Employee)
-│  ├─ css/
-│  │  ├─ index.css
-│  │  ├─ App.css
-│  ├─ img/
-│  │  ├─ logo.svg
-│  ├─ index.js
-│  ├─ registerServiceWorker.js
-├─ package.json
+my-app/\
+├─ node_modules/\
+├─ public/\
+│  ├─ favicon.ico\
+│  ├─ index.html\
+│  ├─ manifest.json\
+├─ src/\
+│  ├─ components/\
+│  │  ├─ api.jsx (Implements axios with BE)\
+│  │  ├─ App.js\
+│  │  ├─ App.test.js\
+│  │  ├─ employee_crud ( Crud component for Employee)\
+│  ├─ css/\
+│  │  ├─ index.css\
+│  │  ├─ App.css\
+│  ├─ img/\
+│  │  ├─ logo.svg\
+│  ├─ index.js\
+│  ├─ registerServiceWorker.js\
+├─ package.json\
 ├─ Dockerfile
 
 
