@@ -3,12 +3,12 @@
 Carry out simple employee management (CRUD). using Django as Backend and React as Frontend
 
 # What I do?
-create data Model to hold employee data using Django ORM
-Create RestApi Using ViewSets of Django Rest Framework
-Exposes The api using Cors to be consumed by React
+- create data Model to hold employee data using Django ORM
+- Create RestApi Using ViewSets of Django Rest Framework
+- Exposes The api using Cors to be consumed by React
 
-Create Basic react frontend to show all employees data
-Making basic Crud actions on React Using Axios to comunicate with Backend
+- Create Basic react frontend to show all employees data
+- Making basic Crud actions on React Using Axios to comunicate with Backend
 
 ## Structure
 The project is divided in 2 basic components
